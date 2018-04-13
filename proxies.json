@@ -1,0 +1,17 @@
+{
+    "$schema": "http://json.schemastore.org/proxies",
+    "proxies": {
+        "maintenance": {
+            "matchCondition": {
+                "route": "{*.}"
+            },
+            "backendUri": "https://mojmaintenancepage.blob.core.windows.net/mojmaintenancepage/index.html"
+        },
+        "health": {
+            "matchCondition": {
+                "route": "/health"
+            },
+            "backendUri": "https://mojmaintenancepage.blob.core.windows.net/mojmaintenancepage/index.html"
+        }
+    }
+}
